@@ -1,0 +1,6 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+echo "✅ Commit successful! 🎉"
+echo "Branch: $(git branch --show-current)"
+echo "Last commit: $(git log -1 --pretty=%B)" 
