@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.3.0](https://github.com/bilal-uxd/calculator/compare/v1.2.0...v1.3.0) (2025-04-15)
+
+
+### Features
+
+* standard version update ([86ea47b](https://github.com/bilal-uxd/calculator/commit/86ea47b1f47ccc6cf03d210983fe162233ae5674))
+
 ## [1.2.0](https://github.com/bilal-uxd/calculator/compare/v1.1.0...v1.2.0) (2025-04-15)
 
 
