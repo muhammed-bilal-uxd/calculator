@@ -1,6 +1,20 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
+mkdir -p .husky
+touch .husky/post-commit
+chmod +x .husky/post-commit
+
+# Prevent loop if the latest commit is already a release
+if git log -1 --pretty=%B | grep -q "chore(release)"; then
+  exit 0
+fi
+
+# Run version bump and push tags
+npx standard-version
+git push --follow-tags origin main
+
+
 echo "✅ Commit successful! 🎉"
 echo "Branch: $(git branch --show-current)"
 echo "Last commit: $(git log -1 --pretty=%B)" 
