@@ -1,5 +1,5 @@
 {
-  "name": "calculator",
+  "name": "@muhammedbilal/calculator",
   "version": "1.2.0",
   "description": "A terminal calculator application",
   "main": "index.js",
