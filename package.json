@@ -1,17 +1,23 @@
 {
   "name": "calculator",
   "version": "1.0.0",
-  "description": "",
+  "description": "A terminal calculator application",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepare": "husky",
     "release": "standard-version",
+    "publish": "npm publish --access public",
     "release:minor": "standard-version --release-as minor",
     "release:major": "standard-version --release-as major",
     "release:alpha": "standard-version --prerelease alpha",
-    "release:beta": "standard-version --prerelease beta"
+    "release:beta": "standard-version --prerelease beta",
+    "prepublishOnly": "npm test",
+    "preversion": "npm test",
+    "version": "npm run release && git add -A",
+    "postversion": "git push && git push --tags && npm publish",
+    "login": "npm login"
   },
   "keywords": [],
   "author": "",
